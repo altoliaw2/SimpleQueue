@@ -61,7 +61,7 @@ template <class c1_C1>
                     return (op_Front!=nullptr)?op_Front->o_Field: NULL;
                 }
         public: c1_C1 fn_ShowReE(){
-                    return (op_Rear!=nullptr)?op_Rear->o_Field: NULL;;
+                    return (op_Rear!=nullptr)?op_Rear->o_Field: NULL;
                 }
     };
 
