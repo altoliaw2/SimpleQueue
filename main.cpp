@@ -42,17 +42,17 @@ template <class c1_C1>
                         return;
                     }
                     else{
-                        std::cerr<< "Pop the item: " << op_Rear->o_Field << "\n";
-                        if(op_Front == op_Rear){// COM: Pop the last one item
+                        std::cerr<< "Pop the item: " << op_Front->o_Field << "\n";
+                        if(op_Front == op_Rear){// COM: Pop the first one item
                             delete op_Rear;
                             op_Front    = nullptr;
                             op_Rear     = nullptr;
                         }
                         else{
-                            Unit<c1_C1>* op_PreTmp  = op_Rear->op_Pre;
-                            op_PreTmp->op_Next      = nullptr;
-                            delete op_Rear;
-                            op_Rear                 = op_PreTmp;
+                            Unit<c1_C1>* op_PreTmp  = op_Front->op_Next;
+                            op_PreTmp->op_Pre       = nullptr;
+                            delete op_Front;
+                            op_Front                = op_PreTmp;
                         }
                         i_Size--;
                     }
